@@ -1,24 +1,27 @@
 #include <iostream>
-
 using namespace std;
 
+long long potencia( int base, int exponencial){
+    long long resultado =1; 
+for ( int  i =0; i< exponencial; i++ ){
+    resultado=resultado*base;
+
+}
+return resultado;
+
+
+}
+
+
 int main() {
-    long long base;
-    int exponente;
-if (cin >> base >> exponente) {
-        
-        if (exponente == 0) {
-            cout << 1 << endl;
-            return 0;
-        }
-        long long resultado = 1;
+  
+int base, exponencial;  
+cin>> base >>exponencial;
 
-        for (int i = 0; i < exponente; i++) {
-            resultado *= base;
-        }
+cout<<potencia( base,exponencial ) <<endl;
 
-        cout << resultado << endl;
-    }
+
+
 
     return 0;
 }
